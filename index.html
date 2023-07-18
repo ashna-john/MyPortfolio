@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education and Skills</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            
+            
+        </ul>
+        </nav>
+        <div class="header-text">
+            <br>
+            <br>
+            <br>
+            <br>
+            <p> Data Analyst</p><br>
+            <h1> I'm<span> Ashna John </span><br>This is my portfolio website.</h1>
+            <br>
+            <br>
+            
+        </div>
+    </div>
+</div>
+
+
+
+<!-----------about----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/pic1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1> <class="sub-title" ></class>About Me</h1><br>
+                <br>
+                <p> I am a Data Analyst with a passion for translating data into meaningful insights. 
+                    I believe that every dataset has a story to tell, and my analytical curiosity drives me to uncover those narratives. 
+                    My approach involves a meticulous exploration of data, identifying trends, patterns, and outliers to provide meaningful interpretations.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<section class="education" id="education">
+    <h1 class="heading">My<span> Education</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>2016</span>
+            <h3> Secondary Education</h3>
+            <p> Good Shepherd Modern English School,Nilambur</p>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>2018</span>
+            <h3> Higher Secondary</h3>
+            <p> Sree Vivekananda HSS,Palemad</p>
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>2021</span>
+            <h3> Under Graduation</h3>
+            <p> MarThoma College, Chungathara, Nilambur</p>
+        </div>
+<!--------skills-------->
+<div class="skills">
+    <h1> My Skills</h1>
+    <li><h3> Html</h3>
+       <span class="bar"><span class= "Html"></span></span>
+    </li>
+    <li><h3>Java</h3>
+       <span class="bar"><span class= "Java"></span></span>
+    </li>
+    <li><h3>Python</h3>
+      <span class="bar"><span class= "Python"></span></span>
+    </li>
+    <li><h3>CSS</h3>
+        <span class="bar"><span class= "CSS"></span></span>
+    </li>
+
+
+
+</div>
+
+
+</div>
+</div>
+
+    </div>
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br> 
+
+
+
+
+<!------------contact------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-envelope"></i></i> contact@ashnajohn194@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 9778239208</p>
+                <div class="social-icons">
+                    <a href= "https://www.instagram.com/_ashna_john_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href= "https://www.linkedin.com/in/ashna-john-268b2121b/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href= "https://github.com/ashna-john"><i class="fa-brands fa-github"></i></a>
+
+                </div>
+            </div>
+            <div class="contact-right">
+
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn1">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzmThey1Ya2YvEz2OwOdHjwvDbdoyCWwFtKDln2Xt9mdkrz8Hrhf0QNCAT-fA-MSOqt/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },4000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
